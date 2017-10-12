@@ -1,0 +1,836 @@
+﻿/*/////////////////////////////////////////////////////////////////////
+FINE COOKIES - Feuille de style de Arnaud STECKLE / www.webdesignertrends.com
+/////////////////////////////////////////////////////////////////////*/
+
+
+/*/////////////////////////////////////////////////////////////////////
+1 / DECLARATIONS DIVERSES
+/////////////////////////////////////////////////////////////////////*/
+
+/*--Changement de la couleur à la sélection souris ! CSS fonctionnel mais non valide!--*/
+::selection {
+  background: #e84743;
+  color: #fff;
+}
+::-moz-selection {
+  background: #e84743;
+  color: #fff;
+} 
+
+.fredokaFont{
+	font-family: 'Fredoka One', cursive;
+}
+
+.cookieFont{
+	font-family: 'Cookie', cursive;
+}
+
+.cl{
+	clear:both;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	
+	font-size:12px;
+}
+/* apply a natural box layout model to all elements */
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////
+2 / layout
+/////////////////////////////////////////////////////////////////////*/
+.contenerHead{
+	background: url(../images/bg-header.gif) no-repeat;
+	background-size: cover;
+	min-height: 605px;
+	border-bottom: 1px solid #69696c;
+}
+.contenerNew{
+	padding-bottom: 2rem;
+	background: white;
+}
+.contenerSecret{
+	background:url(../images/bg-down-arrow.jpg) no-repeat center top #e84743;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+.contenerPlaisir{
+	background:url(../images/img-down-arrow-red.jpg) no-repeat center top white;
+	min-height: 525px;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+.ContenerFooter{
+	background:url(../images/bg-rayures.jpg) repeat; 
+	margin-top: 4rem;
+	padding-bottom: 1rem;
+	position: relative;
+
+}
+header,.contenerNew section, .contenerSecret section,.contenerPlaisir section{
+	width: 100%;
+	max-width: 960px;
+	position: relative;
+	margin: 0 auto;
+}
+ .contenerPlaisir section{
+ 	display: flex;
+ 	flex-direction: row;
+ }
+.contenerPlaisir section article{
+	width: 50%;
+}
+/*/////////////////////////////////////////////////////////////////////
+3 / modules
+/////////////////////////////////////////////////////////////////////*/
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX NAV TOP XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+aside ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	font-family: Overlock, cursive;
+	font-size: 0.75rem;
+	padding: 1.5em 1.5em 1.5em 0;
+}
+aside ul li{
+	margin-left: 2.5rem;
+	position: relative;
+}
+aside ul li:last-child{
+	font-weight: bold;
+}
+aside ul li a{
+	color: black;
+	text-decoration: none;
+	transition: all 0.25s ease-in;
+}
+aside ul li a:hover{
+	color: red;
+}
+aside ul li:nth-child(2):before, aside ul li:last-child:before{
+	content:"";
+	position: absolute;
+	display: block;
+	width: 17px;
+	height: 14px;
+	background: url("../images/icon-user.png");
+	left: -1.5rem;
+}
+aside ul li:last-child:before{
+	background: url("../images/icon-cart.png");
+}
+aside ul li img{
+	margin-left: 3px;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  END NAV TOP XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  LOGO XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+header > aside+figure{
+	position: absolute;
+	top: 0.3rem;
+	left: 40%;
+	transition: top 0.5s ease-out;
+}
+header > aside+figure:hover{
+	top: 1.3rem;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  END LOGO XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  NAV PRINCIPALE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+nav ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background: url(../images/pat-menu.gif);
+	height:3rem;
+	font-family: 'Fredoka One', cursive;
+	font-size: 0.8rem;
+	/*padding-left: 1.5rem;*/
+	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3); 
+	border-radius: 2px;
+}
+nav ul li:nth-child(3){
+	margin-right: 25%;
+}
+nav ul li{
+	margin-top: 1.1rem;
+	margin-right: 2.2rem;
+	text-transform: uppercase;
+	position: relative;
+} 
+nav ul li:after{
+	content:"";
+	position: absolute;
+	display: block;
+	width: 17px;
+	height: 14px;
+	background: url(../images/img-sep.png) no-repeat;
+	right: -1.5rem;
+	top: 0;
+	}
+nav ul li:nth-child(3):after, nav ul li:nth-child(5):after{
+	background: none;
+}
+nav ul li a{
+	color: rgb(41, 136, 140);
+	transition: all 0.5s ease-in;
+}
+nav ul li a:hover{
+	color: #e84743;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  END LOGO XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  PRESENTATION XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+header > nav+figure{
+	background: url(../images/img-planche.png) no-repeat bottom center;
+	background-size: contain;
+	overflow: hidden;
+	margin-top: 2.5rem;
+	padding-left: 4rem;
+	padding-bottom: 5.5rem;
+}
+nav+figure figcaption{
+	position :relative;
+	overflow: hidden;
+}
+nav+figure:after{
+	content: "";
+	display: block;
+	background: url(../images/img-pepites.png) no-repeat bottom center;
+	position: absolute;
+	width: 191px;
+	height: 166px;
+	bottom:6rem;
+	right: 37%;
+}
+nav+figure img{
+	float: left;
+	display: block;
+	max-width: 50%;
+	height: auto;
+}
+.contenerHead h1{
+	font-size: 4.5rem;
+    color: #e84743;
+    text-transform: uppercase;
+    font-family: 'Fredoka One', cursive;
+    padding-top: 2rem;
+    text-align: right;
+    line-height: 3.5rem;
+    float: right;
+}
+.contenerHead h1 span{
+	display: block;
+    font-size: 3.2rem;
+    color: #eea914;
+    text-transform: none;
+    font-family: 'Cookie', cursive;
+    padding-right: 2.5rem;
+}
+.contenerHead h1+p{
+	font-size: 0.85rem;
+    font-weight: 400;
+    padding: 0 0 0 3.5rem;
+    line-height: 1rem;
+    color: #69696c;
+    font-family: Overlock, cursive;
+    float: right;
+}
+header figure+a{
+	display: block;
+    position: absolute;
+    left: 70%;
+    bottom: 30%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 13px;
+    padding: 1rem 4rem 1.5rem 3rem;
+    background: url(../images/btn-gocart.png) no-repeat;
+    font-family: 'Fredoka One', cursive;
+    transition: all 1s ease-out;
+}
+header figure+a:hover{
+	opacity: 0.7;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  NOUVEAUX PRODUITS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+.contenerNew section h1{
+	background: url(../images/sep-titre-rouge.jpg) repeat-x 0 50%;
+	text-align: center;
+	font-size: 1.2rem;
+    color: #e84743;
+    text-transform: uppercase;
+    margin: 2rem auto 1.5rem auto;
+}
+.contenerNew h1 span{
+	background: white;
+	font-family: 'Fredoka One', cursive;
+	padding: 0 1rem;
+}
+.contenerNew ul, .contenerSecret ul{
+	display: flex;
+	justify-content: space-between;
+}
+.contenerNew ul li, .contenerSecret ul li{
+	width: 22%;
+	text-align: center;
+}
+li figure h2{
+    text-align: center;
+}
+li figure img{
+    border-bottom: 1px solid #e84743;
+    max-width: 100%;
+}
+li figure img{
+	transition: all 0.5s ease-in;
+}
+li figure img:hover{
+	opacity: 0.7;
+}
+li figure h2 a{
+	color: #e84743;
+    font-size: 1.3rem;
+    font-family: 'Fredoka One', cursive;
+    transition: all 0.5s ease-in;
+}
+li figure h2 a:hover{
+	color: #EEA914;
+}
+li figure p{
+	font-size: 0.85rem;
+    line-height: 1rem;
+    color: #69696c;
+    font-family: Overlock, cursive;
+    text-align: center;
+    margin-top: 0.8rem;
+}
+li figure p a{
+	font-size: 1rem;
+    color: #FFF;
+    background-color: #e84743;
+    padding: 5px;
+    transition: all 0.5s ease-in;
+}
+li figure p a:hover{
+    background-color: #EEA914;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  SECRETS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+.contenerSecret section h1{
+	text-align: center;
+	font-size: 1.2rem;
+    color: white;
+    text-transform: uppercase;
+    margin: 2rem auto 1.5rem auto;
+    font-family: 'Fredoka One', cursive;
+
+}
+.contenerSecret h1 span{
+	    text-transform: uppercase;
+	    color: #EEA914;
+}
+.contenerSecret figcaption{
+	margin-top: 2rem;
+}
+.contenerSecret li h2 {
+	color: white;
+    font-size: 0.95rem;
+    font-family: 'Fredoka One', cursive;
+}
+.contenerSecret p{
+	color: white;
+}
+.contenerSecret ul, .contenerSecret li{
+	position: relative;
+}
+.contenerSecret ul:after{
+	content:"";
+	position: absolute;
+	display: block;
+	height: 3rem;
+	width: 60%;
+	left: 20%;
+	bottom: 31%;
+	background: url(../images/sprite-fleches.png) no-repeat;
+	background-size: contain;
+}
+.contenerSecret li:after{
+	position: absolute;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+	top: 55%;
+	left:40%;
+	background: url(../images/icon-bulle-num.png) no-repeat;
+	font-family: 'Fredoka One', cursive;
+	color: white;
+	font-size: 1.5rem;
+	padding-top: 0.3rem;
+	padding-right: 0.4rem;
+}
+.contenerSecret li:first-child:after{
+		content:"1";
+}
+.contenerSecret li:nth-child(2):after{
+	content:"2";
+}
+.contenerSecret li:nth-child(3):after{
+	content:"3";
+
+}
+.contenerSecret li:nth-child(4):after{
+	content:"4";
+
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  ARTICLE FAUT SAVOIR XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+.contenerPlaisir article:first-child{
+	overflow: hidden;
+
+}
+.contenerPlaisir article:first-child h2{
+	color: #e84743;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-family: 'Fredoka One', cursive;
+    width: 100%;
+}
+.contenerPlaisir article:first-child figure{
+	border-bottom: #e84743 solid 1px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 0 1rem 1.1rem;
+	float: left;
+}
+.contenerPlaisir figure figcaption{
+	position: absolute;
+	text-align: center;
+	bottom: -100px;
+	background: url(../images/bg-hover-product-min.png);
+	width: 100%;
+	transition: all 0.5s ease-out;
+	font-size: 0.75rem;
+	color: white;
+	padding: 0.25rem;
+}
+.contenerPlaisir figure:hover figcaption{
+	bottom: 0
+}
+.contenerPlaisir figure:nth-child(5) figcaption{
+	background: url(../images/bg-hover-product-big.png) no-repeat;
+	background-size: auto;
+}
+.contenerPlaisir figure figcaption h3{
+	color: white;
+	font-family: 'Fredoka One', cursive;
+	font-size: 1rem;
+	margin-bottom: 0.5rem
+}
+.contenerPlaisir article:first-child a{
+	color: white;
+	font-family: 'Fredoka One', cursive;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+	background: url(../images/btn-voir-catalogue.png) no-repeat;
+	float: right;
+	opacity: 1;
+	text-align: center;
+	padding: 0.25rem 0.25rem 0.35rem 0.25rem;
+}
+.contenerPlaisir article:first-child a:hover{
+	transition: all 0.5s ease-out;
+	opacity: 0.6;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  ARTICLE SAVOUREZ EN LIBERTE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+.contenerPlaisir article:last-child{
+	padding: 0 0.75rem 0 0.75rem;
+}
+.contenerPlaisir div{
+	width: 32%;
+	background: url(../images/bg-etiquette.jpg) no-repeat;
+	background-size: contain;
+	text-align: center;
+	float: left;
+	margin-right: 1.333333%;
+	margin-bottom: 1.5rem;
+	min-height: 22rem;
+}
+.contenerPlaisir div img.liv{
+	display: block;
+	margin: 0 auto 2rem auto;
+}
+.contenerPlaisir div img.com{
+	margin: 0 auto 2.1rem auto;
+}
+.contenerPlaisir div img.rel{
+	margin: 0 auto 0.9rem auto;
+}
+.contenerPlaisir div a{
+	display: block;
+    color: #e84743;
+    transition: color 0.5s ease-in;
+    text-decoration: underline;
+}
+.contenerPlaisir div a:hover{
+    color: #eea914;
+}
+.contenerPlaisir div h5{
+	font-size: 0.96rem;
+    text-transform: uppercase;
+    margin: 5rem 0 2.5rem 0;
+    color: #29888c;
+    font-family: 'Fredoka One', cursive;
+}
+.contenerPlaisir article:last-child h2{
+	font-size: 2rem;
+    color: #eea914;
+    text-align: center;
+    background: url(../images/sep-titre-orange.jpg) center repeat-x;
+    margin: 1rem 0 1rem 0;
+    font-family: 'Cookie', cursive;
+    width: 100%;
+}
+.contenerPlaisir article:last-child h2 span{
+	background: white;
+	padding: 0.5rem
+}
+.contenerPlaisir div+a,.contenerPlaisir div+a+a{
+	display: block;
+    width: 45%;
+    height: 5.5rem;
+    float: left;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Fredoka One', cursive;
+    transition: opacity 0.5s ease-in;
+}
+.contenerPlaisir div+a:hover,.contenerPlaisir div+a+a:hover{
+	opacity: 0.6;
+}
+.contenerPlaisir div+a{
+	padding: 2rem 1rem 0 4rem;
+	background: url(../images/icon-facebook.png) 2rem 1.7rem #3b5998 no-repeat;
+}
+.contenerPlaisir div+a+a{
+    background: url(../images/icon-twitter.png) 1.2rem 2rem #00aced no-repeat;
+    margin-left: 10%;
+    padding: 2rem 1.5rem 0 4.5rem;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  FIGURE FOOTER XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+.ContenerFooter figure{
+	background: url(../images/img-planche-footer.jpg) 0 3.5rem repeat-x;
+	position: absolute;
+	top: -4rem;
+	width: 100%;
+	z-index: 9;
+}
+.ContenerFooter img {
+	display: block;
+	margin: 0 auto;
+	z-index: 10;
+}
+footer aside{
+	width: 30%;
+	padding: 5rem 0 1rem 0;
+	margin: 5rem auto 0 auto;
+	text-align: center;
+    background: url(../images/pat-menu.gif) repeat;
+    color: #69696c;
+    font-family: Overlock, cursive;
+    font-size: 0.9rem;
+    position: relative;
+    }
+footer aside:after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	background: url(../images/bg-ombre-address.png);
+	bottom:0;
+	left: 0;
+}
+footer h4{
+	font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+}
+footer address{
+	font-size: 0.9rem;
+	width: 40%;
+	margin: 0 auto 1em auto;
+}
+footer p{
+	width: 50%;
+	margin: 2rem auto 0 auto;
+	text-align: center;
+    color: #69696c;
+    font-family: Overlock, cursive;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  MEDIA QUERIES XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+								/*TABLETTE*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  MEDIA QUERIES XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+@media screen and (max-width: 965px) and (min-width: 700px) {
+nav {
+    display: flex;
+    justify-content: center;
+  }
+nav ul{
+  	    width: 95%;
+  	    font-size: 0.6rem;
+  	    padding-left: 1.5rem;
+  	}
+nav li {
+  	text-align: center;
+  }
+nav ul li:nth-child(3) {
+    margin-right: 30%;
+}
+aside ul{
+		padding: 0.5em 1.5em 1.5em 0;
+	}
+header > aside+figure{
+	top: 1.3rem;	
+}
+header > aside+figure:hover{
+	top: 1.6rem;
+}
+nav+figure:after {   
+    display: none;
+}
+header > nav+figure{
+	padding-bottom: 4rem;
+}
+nav+figure img{
+	margin-top: 1rem;
+}
+.contenerHead h1{
+	font-size: 4rem;
+	padding-right: 1rem;
+	text-align: center;
+}
+.contenerHead h1 span{
+	font-size: 2.5rem;
+	padding-top: 0.5rem;
+	padding-right: 0;
+	line-height: 1.6rem;
+	text-align: center;
+}
+header figure+a{
+	bottom: 18%;
+	left: 60%;
+}
+.contenerHead h1+p{
+	padding: 0 0 0 0.9rem;
+}
+.contenerNew section h1{
+	font-size: 1.1rem;
+}
+.contenerSecret ul:after{
+	bottom: 41%;
+}
+.contenerSecret li:after{
+	top: 40%;
+}
+.contenerPlaisir section {
+    display: flex;
+    flex-direction: column;
+}
+.contenerPlaisir section article {
+    width: 100%;
+}
+.contenerPlaisir article:first-child h2 {
+	text-align: center;
+}
+.contenerPlaisir article:first-child figure {
+    width: 30%;
+    text-align: center;
+}
+.contenerPlaisir figure figcaption{
+
+	bottom: 0;
+	background: rgba(232, 71, 67, 0.4);
+}
+.contenerPlaisir figure:hover figcaption{
+	bottom: 0
+}
+.contenerPlaisir div {
+	text-align: left;
+	}
+.contenerPlaisir div h5{
+	width: 9rem;
+	padding-left: 0.2em;
+	text-align: center;
+	font-size: 0.8rem;
+}
+.contenerPlaisir div img, .contenerPlaisir div img.liv{
+    margin: 0;
+    padding-left: 10%;
+}
+.contenerPlaisir div a {
+	padding-left: 7%;
+}
+.contenerPlaisir div img.rel {
+    margin: 0;
+    padding-left: 20%;
+}
+footer aside {
+	width: 40%;
+}
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  MEDIA QUERIES XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+								/*MOBILE*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXX  MEDIA QUERIES XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+@media screen and (max-width: 700px) {
+	aside ul {
+		justify-content: center;
+		font-size: 1.1rem;
+	}
+	header > aside+figure {
+    top: 3rem;
+}
+	nav{
+		margin-top: 7rem;
+	}
+	nav ul li:nth-child(3) {
+    margin-right: 1rem;
+}
+nav ul {
+	padding-left: 1.5rem;
+	text-align: center;
+	align-items: center;
+	font-size: 0.7rem;
+}
+nav ul li {
+	margin-top: 0;
+	margin-right: 1.5rem;
+}
+nav ul li:nth-child(3):after {
+    background: url(../images/img-sep.png) no-repeat;
+}
+nav+figure img, nav+figure:after {
+    display: none;
+}
+.contenerHead h1{
+	text-align: center;
+	width: 100%;
+}
+.contenerHead h1+p{
+	float: none;
+	text-align: center;
+	padding: 0;
+}
+header > nav+figure{
+	padding-left: 0;
+	margin: 0;
+	background: none;
+}
+header figure+a{
+	bottom: 0;
+	left: 30%;
+}
+.contenerNew ul, .contenerSecret ul {
+    flex-direction:column;
+}
+.contenerNew ul li, .contenerSecret ul li{
+    width: 100%;
+}
+li figure p {
+    width: 75%;
+    margin: 0.8rem auto;
+}
+.contenerSecret ul:after{
+	display: none;
+}
+.contenerPlaisir section {
+    flex-direction: column;
+}
+.contenerPlaisir section article {
+    width: 80%;
+    margin: 0 auto;
+}
+.contenerPlaisir article:first-child h2{
+	text-align: center;
+}
+.contenerPlaisir article:first-child figure{
+	float: none;
+	text-align: center;
+	margin: 0 auto;
+}
+.contenerPlaisir article:first-child figcaption{
+	bottom: 0;
+	background: rgba(232, 71, 67, 0.6);
+	border-radius: 6px 6px 0 0;
+}
+.contenerPlaisir article:first-child a{
+	margin-top: 2rem;
+}
+footer aside {
+	width: 30%;
+}
+}
+
+
+
+
+@media screen and (max-width: 460px) {
+nav{
+	width: 90%;
+	margin: 8rem auto 0 auto;
+}
+header > aside+figure{
+	top: 6rem;
+	left: 30%;
+}
+header figure+a{
+	left: 10%;
+}
+.contenerHead h1 span{
+	padding: 0;
+}
+nav ul {
+	flex-wrap: wrap;
+	padding-top: 1rem;
+    padding-left: 1.5rem;
+    text-align: center;
+    align-items: center;
+    font-size: 0.8rem;
+    height: auto;
+}
+nav li{
+	width: 40%;
+	margin: 1rem 0;
+}
+aside ul{
+	flex-wrap: wrap;
+}
+aside li:last-child{
+	margin-top: 1rem;
+}
+}
+
